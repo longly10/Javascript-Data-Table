@@ -1,0 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+@import "compass/css3";
+
+.table>thead>tr>th,
+.table>tfoot>tr>th{
+	padding: 8px 25px 8px 8px;
+	cursor: pointer;
+}
+
+.pagination > li > a{
+	cursor: pointer;
+}
+.sort-column{
+	position: relative;
+
+	&::after{
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 5px;
+		width: 10px;
+		height: 10px;
+		@include translateY(-50%);
+		background-position: right center;
+		background-size: 10px auto;
+		background-repeat: no-repeat;
+		background-image: url('../images/sort/sort-arrows.svg');
+	}
+
+	&.sort-dir-desc::after{
+		background-image: url('../images/sort/desc.svg');
+	}
+	&.sort-dir-asc::after{
+		background-image: url('../images/sort/asc.svg');
+	}
+}
+
+.sort-asc .asc{
+	display: none;
+}
+.sort-desc .desc{
+	display: none;
+}

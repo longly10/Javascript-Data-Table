@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+/* line 4, ../sass/style.scss */
+.table > thead > tr > th,
+.table > tfoot > tr > th {
+  padding: 8px 25px 8px 8px;
+  cursor: pointer;
+}
+
+/* line 10, ../sass/style.scss */
+.pagination > li > a {
+  cursor: pointer;
+}
+
+/* line 13, ../sass/style.scss */
+.sort-column {
+  position: relative;
+}
+/* line 16, ../sass/style.scss */
+.sort-column::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  width: 10px;
+  height: 10px;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-position: right center;
+  background-size: 10px auto;
+  background-repeat: no-repeat;
+  background-image: url("../images/sort/sort-arrows.svg");
+}
+/* line 30, ../sass/style.scss */
+.sort-column.sort-dir-desc::after {
+  background-image: url("../images/sort/desc.svg");
+}
+/* line 33, ../sass/style.scss */
+.sort-column.sort-dir-asc::after {
+  background-image: url("../images/sort/asc.svg");
+}
+
+/* line 38, ../sass/style.scss */
+.sort-asc .asc {
+  display: none;
+}
+
+/* line 41, ../sass/style.scss */
+.sort-desc .desc {
+  display: none;
+}
